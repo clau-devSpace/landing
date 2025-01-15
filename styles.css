@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sixtyfour&display=swap');
+
+:root{
+
+    --primary-color: #c70a20;
+    --extra-light: #f3f4f6;
+    --max-width: 1400px;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*overflow: hidden;*/
+    
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    max-width: var(--max-width);
+    /*z-index: 1;*/
+    overflow: hidden;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.nav-logo{
+    font-family: "Sixtyfour", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--extra-light);
+}
+
+.nav-ul{
+    list-style: none;
+    display: none; 
+    gap: 30px;
+}
+
+.nav-ul a{
+    text-decoration: none;
+    color: var(--extra-light);
+    font-size: 18px;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+header{
+    background-image: url("./sources/girlonwork.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.header-container{
+    position: relative;
+    min-height: 175vh;
+    max-width: var(--max-width);
+    margin: auto;
+    overflow: hidden;
+}
+
+.header-content{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-content h1{
+    font-size: 80px;
+    line-height: 1; 
+    font-weight: 300;
+    color: var(--extra-light);
+}
+
+.header-content h1 span{
+    color: var(--primary-color);
+}
+
+.header-content .give-wings{
+    text-decoration: none;
+    margin-top: 40px;
+    color: var(--extra-light);
+    font-weight: 600;
+    position: relative;
+}
+
+.footer-cards{
+    position: absolute;
+    bottom: 0;
+    /*width: calc(100% - 2rem);*/
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: end;
+    gap: 10px;
+}
+
+.cards{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255,255,255, 0.1);
+    color: var(--extra-light);
+    height: max-content;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.cards h2{
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.cards p{
+    margin-top: 10px;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+#check{
+    display: none;
+}
+
+nav .checkbtn{
+    font-size: 25px;
+    color: #fff;
+    float: right;
+    display: none;
+}
+
+.burger-menu{
+    padding-left: 15px;
+}
+
+.abrir-menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+.cerrar-menu{
+    visibility: hidden;
+} 
+
+
+@media(min-width: 240px){
+
+    .header-container{
+        min-height: 200vh;
+    }
+
+    .header-content{
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .footer-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .header-content h1{
+        font-size: 30px;
+    }
+
+}
+
+@media(min-width: 576px){
+
+    .header-container{
+        min-height: 150vh;
+    }
+
+    .footer-cards{
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+
+    .header-content{
+        height: 80vh;
+    }
+    
+    .header-content h1{
+        font-size: 30px;
+    }
+
+
+}
+
+@media(min-width: 576px){
+
+    .header-container{
+        min-height: 150vh;
+    }
+
+    .footer-cards{
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+
+    .header-content{
+        height: 80vh;
+    }
+    
+    .header-content h1{
+        font-size: 30px;
+    }
+
+
+}
+
+@media(min-width: 768px){
+  
+    .header-container{
+        min-height: 100vh;
+    }
+
+    .footer-cards{
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    .cards{
+        height: 100px;
+    }
+
+    .cards:hover{
+        height: 200px;
+    }
+
+    .header-content h1{
+        font-size: 40px;
+    }
+}
+
+@media(min-width: 992px){
+  
+    .header-container{
+        min-height: 100vh;
+    }
+    
+    .header-content{
+        align-items: flex-start;
+        text-align: left;
+        padding-left: 25px;
+    }
+
+    .footer-cards{
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    .cards{
+        height: 70px;
+    }
+
+    .cards:hover{
+        height: 170px;
+    }
+
+    .header-content h1{
+        font-size: 50px;
+    }
+
+}
